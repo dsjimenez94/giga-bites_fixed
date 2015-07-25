@@ -1,0 +1,60 @@
+
+		body { 
+			background-color: #FFFFFF;
+	}
+		h1{
+			color:#660066;
+			font-family: 'Tulpen One', cursive;
+	}
+	  
+	 	header {
+		    background-color:#0052CC;
+		    color:#CC9900;
+		    text-align:left;
+		    padding:2px;
+		    font-family: 'Tulpen One', cursive;
+		    font-size: 70px
+
+	}
+		nav {
+			background-color:#CC9900;
+		    color:#FFFFFF;
+		    font-family: 'Tulpen One', cursive;
+		    font-size: 40px;
+		    text-align: center;
+		    text-indent: ;
+
+	}
+    
+		#section {
+    width:350px;
+    float:left;
+    padding:15px; 
+}
+		footer {
+		    background-color:#0052CC;
+		    color:#CC9900;
+		    font-family:'Raleway',sans-serif, 50px;
+		    clear:both;
+		    text-align:center;
+		    font-family: 'Tulpen One', cursive;
+		    padding:5px; 
+		     font-size: 30px
+	}
+
+		#horizontal .slides {
+				border: solid 10px #660066;
+				width: 600px;
+				height: 300px;
+				overflow:hidden;
+
+				margin: 15px auto;
+			}
+			#horizontal .slides .drawer {
+				/*border:solid 2px blue;*/
+				width: 3000px;
+			}
+			#horizontal .slides .drawer img{
+				float:left;
+			}
+			
