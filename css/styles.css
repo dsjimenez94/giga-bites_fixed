@@ -1,11 +1,9 @@
 
 		body { 
-			background-color: #85E0FF;
-			font-family: 'Tulpen One', cursive;
+			background-color: #FFFFFF;
 	}
 		h1{
 			color:#660066;
-
 			font-family: 'Tulpen One', cursive;
 	}
 	  
@@ -13,7 +11,7 @@
 		    background-color:#0052CC;
 		    color:#CC9900;
 		    text-align:left;
-		    padding:4px;
+		    padding:2px;
 		    font-family: 'Tulpen One', cursive;
 		    font-size: 70px
 
@@ -27,26 +25,12 @@
 		    text-indent: ;
 
 	}
-	
-	p {
-		font-size: 15px;
-		font-family: helvetica;
-		text-align: left;
-
-	}
     
 		#section {
     width:350px;
-    float:center;
+    float:left;
     padding:15px; 
-
 }
-	
-	section{
-		float: center;
-		}
-
-
 		footer {
 		    background-color:#0052CC;
 		    color:#CC9900;
@@ -56,7 +40,6 @@
 		    font-family: 'Tulpen One', cursive;
 		    padding:5px; 
 		     font-size: 30px
-	}
 	}
 
 		#horizontal .slides {
