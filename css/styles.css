@@ -1,18 +1,20 @@
 
 		body { 
-			background-color: #85E0FF;
+			background-image: url(../_img/stars.jpg);
 			font-family: 'Tulpen One', cursive;
+			background-repeat: repeat;
+		background-size: 400px;
 	}
 		h1{
-			color:#660066;
-
+			color:black;
 			font-family: 'Tulpen One', cursive;
+			background-image: url(../_img/stars.jpg);
 	}
 	  
 	 	header {
-		    background-color:#0052CC;
-		    color:#CC9900;
-		    text-align:left;
+		    background-image: url(../_img/gold.jpg);
+		    color:#black;
+		    text-align:center;
 		    padding:4px;
 		    font-family: 'Tulpen One', cursive;
 		    font-size: 70px
@@ -28,6 +30,7 @@
 
 	}
 	
+	}
 	p {
 		font-size: 15px;
 		font-family: helvetica;
@@ -44,11 +47,15 @@
 	
 	section{
 		float: center;
+		background-image: url(../_img/stars.jpg);
+	
 		}
 
 
+
+
 		footer {
-		    background-color:#0052CC;
+		    background-image: url(../_img/gold.jpg);
 		    color:#CC9900;
 		    font-family:'Raleway',sans-serif, 50px;
 		    clear:both;
