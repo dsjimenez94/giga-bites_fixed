@@ -58,22 +58,35 @@
 				text-align: center;
 				font-size: 35px;
 			}
-			div{
-				background-color: ;
-			}
 
-			div .sliding{
-				color: white;
-				background-color: red;
+			#faded{
+				width: 800px;
+				
+				font-size: 0px;
+				margin: 20px auto;
 			}
+			
 
-			div .reservations{
-				background-color: ;
-			}
 
-			div .date{
-				text-align: center;
-			}
+			#faded .item{
+				width: 300px;
+				height: 200px;
+				border: solid 5px #1F1E5E;
+				
+				position: relative;
+
+				display: inline-block;
+
+				}
+
+			#faded .item img {
+				position: absolute;
+				left: 0px;
+				top: 0px;
+				}
+
+			#faded .item img.color{
+				opacity: 0; }
 		</style>
 	</head>
 	<body>
@@ -82,15 +95,40 @@
 	<div>
 		
 
-		<div id="sliding">
-			<img src="_img/food1.jpg" height="480" width="620">
-			<img src="_img/food2.jpg" height="451" width="625">
-			<img src="_img/food3.jpg" height="440" width="620">
-			<img src="_img/food 4.jpg" height="340" width="660">
-			<img src="_img/food5.jpg" height="399" width="600">
+		<div id="faded">
+
+			<div class= "item">
+		<img class="gray" src="_img/food1 gray.jpg"height="200" width="400">
+		<img class="color" src="_img/food1.jpg"height="200" width="400">
+		</div>
+
+
+		<div class= "item">
+		<img class="gray" src="_img/food2 gray.jpg"height="200" width="400">
+		<img class="color" src="_img/food2.jpg"height="200" width="400">
+		</div>
+
+		<div class= "item">
+		<img class="gray" src="_img/food3 gray.jpg"height="200" width="400">
+		<img class="color" src="_img/food3.jpg"height="200" width="400">
+		</div>
+
+		<div class= "item">
+		<img class="gray" src="_img/food 4 gray.jpg"height="200" width="400">
+		<img class="color" src="_img/food 4.jpg"height="200" width="400">
+		</div>
+
+		<div class= "item">
+		<img class="gray" src="_img/food5 gray.jpg"height="200" width="400">
+		<img class="color" src="_img/food5.jpg"height="200" width="400">
+		</div>
+
 		</div>
 
 		<div>
+
+
+
 		<h2>Reservations</h2>
 	<div id="reservations">
 
@@ -110,22 +148,22 @@
 		<script type="text/javascript">
 
 			//greater than the first  -move off stage.
-			$('#sliding img:gt(0)').css({'left':'600px'});
-			
-			function slide_animate() {
-				$('#sliding img:eq(1)').delay(2000).animate({'left':'0px'}, 1000);
-				$('#sliding img:eq(0)').delay(2000).animate({'left':'-600px'}, 1000, whenDone);
+			function fade_over () {
+					$(this).find('.color').stop(true).animate({'opacity':'1'},400);
 
-				function whenDone() {
-					$('#sliding img:eq(0)')
-						.css({'left':'600px'})
-						.appendTo('#sliding');
-
-					slide_animate(); //continue party
 				}
-			}
 
-			slide_animate(); //start party
+				$('#faded .item').mouseover(fade_over);
+
+				function fade_out () {
+					$(this).find('.color').stop(true).animate({'opacity':'0'},400);
+
+				}
+
+				$('#faded .item').mouseout(fade_out);
+
+				</script>
+
 
 		</script>
  

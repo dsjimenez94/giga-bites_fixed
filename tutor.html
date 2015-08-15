@@ -3,36 +3,12 @@
 <head>
 	<link href='http://fonts.googleapis.com/css?family=Tulpen+One' rel='stylesheet' type='text/css'>
 		<meta charset="utf-8">
-		<title>Responsive</title>
-
 		<link rel="stylesheet" type="text/css" href="css/styles.css">
-	</head>
-		<body>
 			<div id="container">
-			<header>Giga-Bites</header>
-			<!DOCTYPE html>
-<html>
-	<head>
-		<title>Sliding :: Slideshows</title>
+		<title>Swap</title>
 		<style type="text/css">
 
-			#sliding {
-				width: 600px;
-				height: 300px;
-				border: solid 15px #1C521A;
-				margin: 25px auto;
-
-				position: relative;
-
-				overflow: hidden;
-			}
-
-			#sliding img {
-				position: absolute;
-				left: 0px;
-				top: 0px;
-			}
-
+		
 			div .tutor{
 				background-color: red;
 
@@ -46,19 +22,23 @@
 				font-size: 32px;
 			}
 
+			#swap {
+				width: 600px;
+				border: solid 10px #5E2957;
+				font-size: 0px;
+				margin: 20px auto;
+				}
+
+			#swap img.enlarged {}
+			#swap .gallery img {opacity: .5;}
+
 
 		</style>
 	</head>
+		
+		<header>GIGABITES</header>
 	<body>
 		<h1>Tutors and Study Sessions</h1>
-
-		<div id="sliding">
-			<img src="_img/studygroup.jpg" height="480" width="720">
-			<img src="_img/eating .jpg" height="373" width="660">
-			<img src="_img/tutor.jpg" height="432" width="648">
-			<img src="_img/tutors.jpg" height="325" width="700">
-			<img src="_img/tutor copy.jpg" height="399" width="600">
-		</div>
 
 
 <h2>Reservations</h2>
@@ -68,17 +48,23 @@
 		<p> As you browse, you are able to select, if wanted, schedule, or even schedule a day where you can meet the tutor before the teaching commences.</p>
 		<p> Remember, you as the pupil or parent have the right and plenty of time to select. </p> </div>
 
-		<div>
-			<img src="_img/_teachers/teacher1.png" height="153" width="239">
-			<img src="_img/_teachers/teacher2.png" height="153" width="239">
-			<img src="_img/_teachers/teacher3.png" height="153" width="239">
-			<img src="_img/_teachers/teacher4.png" height="153" width="239">
-			<img src="_img/_teachers/teacher5.png" height="153" width="239">
-			<img src="_img/_teachers/teacher6.png" height="153" width="239">
-			<img src="_img/_teachers/teacher7.png" height="153" width="239">
-			<img src="_img/_teachers/teacher8.png" height="153" width="239">
-			<img src="_img/_teachers/teacher9.png" height="153" width="239">
-			<img src="_img/_teachers/teacher10.png" height="153" width="239">
+
+
+		<div id="swap"> 
+
+		<img class = "enlarged" src="_img/_teachers/teacher1.png" height="350" width="500">
+			<div class="gallery">
+				<img data-large="_img/_teachers/teacher1.png" src="_img/_teachers/teacher1.png" height="123" width="180">
+				<img data-large="_img/_teachers/teacher2.png" src="_img/_teachers/teacher2.png"height="123" width="180">
+				<img data-large="_img/_teachers/teacher3.png" src="_img/_teachers/teacher3.png"height="123" width="180">
+				<img data-large="_img/_teachers/teacher4.png" src="_img/_teachers/teacher4.png"height="123" width="180">
+				<img data-large="_img/_teachers/teacher5.png" src="_img/_teachers/teacher5.png"height="123" width="180">
+				<img data-large="_img/_teachers/teacher6.png" src="_img/_teachers/teacher6.png"height="123" width="180">
+				<img data-large="_img/_teachers/teacher7.png" src="_img/_teachers/teacher7.png"height="123" width="180">
+				<img data-large="_img/_teachers/teacher8.png" src="_img/_teachers/teacher8.png"height="123" width="180">
+				<img data-large="_img/_teachers/teacher9.png" src="_img/_teachers/teacher9.png"height="123" width="180">
+				<img data-large="_img/_teachers/teacher10.png" src="_img/_teachers/teacher10.png"height="13" width="180">
+			</div>
 		</div>
 		
 	
@@ -91,24 +77,12 @@
 
 		<script type="text/javascript" src="_js/jquery-1.11.0.min.js"></script>
 		<script type="text/javascript">
-
-			//greater than the first  -move off stage.
-			$('#sliding img:gt(0)').css({'left':'600px'});
-			
-			function slide_animate() {
-				$('#sliding img:eq(1)').delay(2000).animate({'left':'0px'}, 1000);
-				$('#sliding img:eq(0)').delay(2000).animate({'left':'-600px'}, 1000, whenDone);
-
-				function whenDone() {
-					$('#sliding img:eq(0)')
-						.css({'left':'600px'})
-						.appendTo('#sliding');
-
-					slide_animate(); //continue party
-				}
+			function swap_over(){
+				var newSrc = $(this).attr('src');
+				$('#swap img.enlarged').attr('src', newSrc);
 			}
+				$('#swap .gallery img').mouseover(swap_over);
 
-			slide_animate(); //start party
 
 		</script>
 
