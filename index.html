@@ -6,27 +6,90 @@
 		<title>Responsive</title>
 
 		<link rel="stylesheet" type="text/css" href="css/styles.css">
+		<style>
+		#buttons {
+			width:1260px;
+			padding:10px;
+			margin: auto;
+			overflow: hidden;
+		}
+
+		#buttons .class{
+			width: 140px;
+			height: 472px;
+			
+		}
+
+		#buttons .class h2 {
+			position: absolute;
+				left: 0px;
+				bottom: 0px;
+				right: 0px;
+				color: #eeeeee;
+				text-align: center;
+				font-size: 25px;
+				font-family: 'Knewave', cursive;
+				font-family: 'Open Sans', sans-serif;
+				font-style: italic;
+				line-height: 27px;
+
+		
+				margin: 0px;
+				padding: 10px;
+				opacity: 0; 
+				}
+
+				
+		}
+		</style>
 	</head>
 		<body>
-			<div id="container">
+			<div id="buttons">
 			<header>Giga-Bites</header>
 
 			<section> 
+			<div id="diner" class="class">
 			<a href="diner.html"> <img src="_img/icon1.gif" height="430" width="390"></a>
+			<h2>Diner</h2>
+			</div>
 			
-
+			<div id="tutor" class="class">
 			<a href="tutor.html"><img src="_img/icon2.gif" height="430" width="390"></a>
+			<h2>Tutor</h2>
+			</div>
 		
-
+			<div id="account" class="class">
 			<a href="account.html"><img src="_img/icon3.gif" height="430" width="390"></a>
+			<h2>Account</h2>
+			</div>
 			
-
+			<div id="about" class="class">
 			<a href="about.html"><img src="_img/icon4.gif" height="430" width="390"></a>
-		
+			<h2>About</h2>
+			</div>
+			</div>
 
 			</section>
 
 </div>
+
+<script type="text/javascript" src="_js/jquery-1.11.0.min.js"></script>
+		<script type="text/javascript">
+
+			function class_over() {
+				$(this).find('h2')
+					.stop(true)
+					.animate({'opacity':'1'}, 500);}
+			$('#buttons .class').mouseover(class_over);
+
+			function class_out() {
+				$(this).find('h2')
+					.stop(true)
+					.animate({'opacity':'0'},1000);
+			}
+			$('#buttons .class').mouseout(class_out);
+
+		</script>
 		<footer>By Deborah Jimenez</footer>
 	</body>
 </html>
